@@ -14,7 +14,7 @@
 function findIndex(arr, n) {
   let start = 0;
   let end = arr.length;
-  while (true) {
+  while (start <= end) {
     const center = Math.floor((end - start) / 2 + start);
     if (arr[center] > n) {
       end = center;
@@ -24,6 +24,7 @@ function findIndex(arr, n) {
       return center;
     }
   }
+  return -1;
 }
 
 module.exports = findIndex;
